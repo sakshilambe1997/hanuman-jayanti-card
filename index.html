@@ -10,7 +10,7 @@
             width:350px;
             background-image: linear-gradient( 68.4deg,  rgba(99,251,215,1) -0.4%, rgba(5,222,250,1) 100.2% );
             margin: 50px auto;
-            padding: 10px;
+            padding: 20px;
             border-radius: 20px;
             position: relative;
             border: 1px solid black;
@@ -20,6 +20,7 @@
             text-align: center;
             margin: 15px;
             font-size: 25px;
+            margin-top: 5px;
         }
 
         .image{
@@ -35,8 +36,8 @@
             /* background-color: brown; */
             width: 300px;
             position: absolute;
-            bottom: 50px;
-            left: 35px;
+            bottom: 60px;
+            left: 45px;
             justify-content: center;
      
             
@@ -50,8 +51,25 @@
             margin: 5px auto;
             font-weight: bold;
             padding: 10px;
-            border-radius: 10px;
-            
+            border-radius: 10px;    
+        }
+
+        .arrow-img{
+            height: 25px;
+            position: absolute;
+            top:200px;
+            right: 5px;
+            cursor: pointer;  
+        }
+
+        .arrow-img:hover{
+            background-color: aqua;
+        }
+
+        .creators-name{
+            text-align: right;
+            font-weight: bold;
+            margin-top: 30px;
         }
     </style>
 </head>
@@ -59,7 +77,9 @@
     <div class="card-container">
         <h1 class="heading">🌸!! जय श्री राम !!🌸</h1>
 
-       <img src="./image-1.1.jpg" class="image" id="image" onmouseenter="changeImage()">
+        <img src="./dark-mode.png" class="mode">
+
+       <img src="./image-1.1.jpg" class="image" id="image">
 
        <div class="decs-container">
        <p class="desc">"भगवान श्री हनुमान आपल्या जीवनात आनंद,
@@ -68,7 +88,9 @@
         हनुमान जयंतीच्या हार्दिक शुभेच्छा"</p>
         </div>
 
-        <img src="./arrow-img.png" class="arrow-img">
+        <img src="./arrow-img.png" class="arrow-img"  onclick="changeImage()">
+
+        <p class="creators-name">Created By: Sakshi Lambe</p>
 
     
     </div>
