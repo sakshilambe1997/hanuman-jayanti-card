@@ -59,7 +59,7 @@
     <div class="card-container">
         <h1 class="heading">🌸!! जय श्री राम !!🌸</h1>
 
-       <img src="./image-1.1.jpg" class="image">
+       <img src="./image-1.1.jpg" class="image" id="image" onmouseenter="changeImage()">
 
        <div class="decs-container">
        <p class="desc">"भगवान श्री हनुमान आपल्या जीवनात आनंद,
@@ -68,7 +68,51 @@
         हनुमान जयंतीच्या हार्दिक शुभेच्छा"</p>
         </div>
 
+        <img src="./arrow-img.png" class="arrow-img">
+
+    
     </div>
+
+
+    <script>
+
+        function changeImage(){
+
+            const min=1;
+            const max=6;
+            const value=Math.round(Math.random()*(max-min)+(min));
+            console.log(value);
+            const imageElement = document.getElementById('image');
+
+
+            switch(value){
+                case 1:
+                imageElement.src="./image-1.1.jpg";
+                break;
+
+                case 2:
+                imageElement.src="./image-2.jpg";
+                break;
+
+                case 3:
+                imageElement.src="./image-3.jpg";
+                break;
+
+                case 4:
+                imageElement.src="./image-4.jpg";
+                break;
+
+                case 5:
+                imageElement.src="./image-5.jpg";
+                break;
+
+                case 6:
+                imageElement.src="./image-6.jpg";
+                break;
+                    
+            }
+        }
+    </script>
     
 </body>
 </html>
