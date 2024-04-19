@@ -8,34 +8,65 @@
         .card-container{
             height: 450px;
             width:350px;
-            background-color: aquamarine;
+            background-image: linear-gradient( 68.4deg,  rgba(99,251,215,1) -0.4%, rgba(5,222,250,1) 100.2% );
             margin: 50px auto;
             padding: 10px;
-            border-radius: 10px;
+            border-radius: 20px;
+            position: relative;
+            border: 1px solid black;
         }
 
         .heading{
             text-align: center;
-            margin: 10px;
+            margin: 15px;
+            font-size: 25px;
         }
 
         .image{
-            height: 350px;
+            height: 360px;
             width: 320px;
             border-radius: 10px;
             display: block;
             margin: 0 auto;
+            
+        }
+
+        .decs-container{
+            /* background-color: brown; */
+            width: 300px;
+            position: absolute;
+            bottom: 50px;
+            left: 35px;
+            justify-content: center;
+     
+            
+        }
+
+        .desc{
+            background-image: linear-gradient( 174.2deg,  rgba(255,244,228,1) 7.1%, rgba(240,246,238,1) 67.4% );
+            height: 100px;
+            width:270px;
+            display: block;
+            margin: 5px auto;
+            font-weight: bold;
+            padding: 10px;
+            border-radius: 10px;
+            
         }
     </style>
 </head>
 <body>
     <div class="card-container">
         <h1 class="heading">🌸!! जय श्री राम !!🌸</h1>
+
        <img src="./image-1.1.jpg" class="image">
-       <p class="">"भगवान श्री हनुमान आपल्या जीवनात आनंद,
+
+       <div class="decs-container">
+       <p class="desc">"भगवान श्री हनुमान आपल्या जीवनात आनंद,
         शांती आणि समृद्धी मिळवून देवो
         आणि त्याची कृपादृष्टी आपल्या परिवारावर कायम राहो"
         हनुमान जयंतीच्या हार्दिक शुभेच्छा"</p>
+        </div>
 
     </div>
     
