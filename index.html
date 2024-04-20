@@ -12,7 +12,7 @@
         }
 
         .card-container {
-            height: 480px;
+            height: 470px;
             width: 350px;
             margin: 20px auto;
             padding: 20px;
@@ -32,7 +32,7 @@
             text-align: center;
             margin: 7px;
             font-size: 25px;
-            margin-top: 5px;
+            margin-top: 0;
         }
 
         .image {
@@ -48,7 +48,7 @@
             /* background-color: brown; */
             width: 300px;
             position: absolute;
-            bottom: 100px;
+            bottom: 110px;
             left: 45px;
             justify-content: center;
         }
@@ -131,11 +131,11 @@
         }
 
         .btn{
-            padding: 3px 10px;
+            padding: 5px 12px;
             border-radius: 10px;
             background-color: black;
             color: white;
-            font-size: 16px;
+            font-size: 15px;
             font-weight: bold;
             cursor: pointer;
         }
@@ -153,7 +153,21 @@
             border-radius: 10px;
             text-align: center;
             font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
+
+        .bg-button{
+            background-color: aqua;
+            color: black;
+        }
+
+        .text-color{
+            color: black;
+        }
+
+
     </style>
 </head>
 
@@ -177,11 +191,11 @@
 
         <div class="comment-division">
             <div class="btn-container">
-            <button class="btn">Click Here</button>
+            <button class="btn" onclick="sayRam()">Click Here</button>
         </div>
 
         <div class="btn-desc-container" >
-           <p> </p> 
+           <p id="hello-ram" class="jay-ram-heading">🌸🌸</p> 
         </div>
         </div>
 
@@ -247,6 +261,29 @@
                 console.log(state);
                 containerElement.classList.add("bg-light");
                 containerElement.classList.remove("bg-dark");
+            }
+        }
+
+        function sayRam(){
+            const ramDescElement=document.getElementById("hello-ram");
+    
+            const min=1;
+            const max=3;
+            const value= Math.round(Math.random()*(max-min)+(min));
+            console.log(value);
+
+            switch(value){
+                case (1):
+                ramDescElement.innerText= "🌸 !! जय श्री राम !! 🌸";
+                break;
+
+                case (2):
+                ramDescElement.innerText="!!श्रीराम जय जय राम!!"
+                break;
+
+                case (3):
+                ramDescElement.innerText="!!जय रघुनंदन जय सियाराम!!"
+                break;
             }
         }
 
