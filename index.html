@@ -8,23 +8,24 @@
     <style>
         body {
             margin: 0;
-            /* background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(161,255,255,1) 11.3%, rgba(6,255,255,1) 41.2%, rgba(0,216,216,1) 77.8% );
-
-             */
+            background-color: #f2f2f2;
         }
 
         .card-container {
-            height: 450px;
+            height: 480px;
             width: 350px;
-            margin: 50px auto;
+            margin: 20px auto;
             padding: 20px;
             border-radius: 20px;
             position: relative;
-            border: 1px solid black;
+            border: 2px solid black;
+            box-shadow: 0 0 15px 2px grey;
         }
 
         .bg-container-dafult {
             background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(161,255,255,1) 11.3%, rgba(6,255,255,1) 41.2%, rgba(0,216,216,1) 77.8% );
+
+            
         }
 
         .heading {
@@ -47,7 +48,7 @@
             /* background-color: brown; */
             width: 300px;
             position: absolute;
-            bottom: 60px;
+            bottom: 90px;
             left: 45px;
             justify-content: center;
         }
@@ -82,7 +83,7 @@
         .creators-name {
             text-align: right;
             font-weight: bold;
-            margin-top: 30px;
+            margin-top: 5px;
         }
 
         .mode {
@@ -112,6 +113,38 @@
             top: 200px;
             left: 2px;
         }
+
+        .comment-division{
+            height: 50px;
+            background-color:bisque;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-top: 7px;
+            margin-bottom: 0;
+            
+        }
+
+        .btn-container{
+            background-color: aquamarine;
+            height: 30px;
+        }
+
+        .btn{
+            padding: 3px 10px;
+            border-radius: 10px;
+            background-color: black;
+            color: white;
+            font-size: 18px;
+        }
+
+        .btn-desc-container{
+            background-color: blueviolet;
+            height: 30px;
+            width: 200px;
+            border: 1px solid black;
+            border-radius: 10px;
+        }
     </style>
 </head>
 
@@ -132,6 +165,16 @@
 
         <img src="./left-arrow.png" class="arrow-img" onclick="changeImage()">
         <img src="./right-arrow.png" class="arrow-img position" onclick="changeImage()">
+
+        <div class="comment-division">
+            <div class="btn-container">
+            <button class="btn">click here</button>
+        </div>
+
+        <div class="btn-desc-container" >
+            ........
+        </div>
+        </div>
 
         <p class="creators-name">Created By: Sakshi Lambe</p>
     </div>
