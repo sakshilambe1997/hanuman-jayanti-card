@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hanuman Jayanti Card</title>
     <style>
-        .card-container{
+        body {
+            margin: 0;
+
+        }
+
+        .card-container {
             height: 450px;
-            width:350px;
-            background-image: linear-gradient( 68.4deg,  rgba(99,251,215,1) -0.4%, rgba(5,222,250,1) 100.2% );
+            width: 350px;
             margin: 50px auto;
             padding: 20px;
             border-radius: 20px;
@@ -16,130 +21,173 @@
             border: 1px solid black;
         }
 
-        .heading{
+        .bg-container-dafult {
+            background-image: linear-gradient(68.4deg, rgba(99, 251, 215, 1) -0.4%, rgba(5, 222, 250, 1) 100.2%);
+        }
+
+        .heading {
             text-align: center;
             margin: 15px;
             font-size: 25px;
             margin-top: 5px;
         }
 
-        .image{
+        .image {
             height: 360px;
             width: 320px;
             border-radius: 10px;
             display: block;
             margin: 0 auto;
-            
+
         }
 
-        .decs-container{
+        .decs-container {
             /* background-color: brown; */
             width: 300px;
             position: absolute;
             bottom: 60px;
             left: 45px;
-            justify-content: center;            
+            justify-content: center;
         }
 
-        .desc{
-            background-image: linear-gradient( 174.2deg,  rgba(255,244,228,1) 7.1%, rgba(240,246,238,1) 67.4% );
+        .desc {
+            background-image: linear-gradient(174.2deg, rgba(255, 244, 228, 1) 7.1%, rgba(240, 246, 238, 1) 67.4%);
             height: 100px;
-            width:270px;
+            width: 270px;
             display: block;
             margin: 5px auto;
             font-weight: bold;
             padding: 10px;
-            border-radius: 10px;    
+            border-radius: 10px;
         }
 
-        .arrow-img{
-            height: 25px;
+        .arrow-img {
+            height: 30px;
             position: absolute;
-            top:200px;
-            right: 5px;
-            cursor: pointer;  
+            top: 200px;
+            right: 2px;
+            cursor: pointer;
+            background-color: greenyellow;
         }
 
-        .arrow-img:hover{
+        .arrow-img:hover {
             background-color: aqua;
         }
 
-        .creators-name{
+        .creators-name {
             text-align: right;
             font-weight: bold;
             margin-top: 30px;
         }
 
-        .mode{
+        .mode {
             height: 30px;
             position: absolute;
             top: 20px;
             right: 10px;
+            cursor: pointer;
+        }
+
+        .bg-dark {
+            background-color: black !important;
+            color: white;
+        }
+
+        .bg-light {
+            background-image: linear-gradient(68.4deg, rgba(99, 251, 215, 1) -0.4%, rgba(5, 222, 250, 1) 100.2%);
+            color: black;
+        }
+
+        .decs-color{
+            color: black;
         }
     </style>
 </head>
+
 <body>
-    <div class="card-container">
+    <div class="card-container bg-container-dafult" id="container">
         <h1 class="heading">🌸!! जय श्री राम !!🌸</h1>
 
-        <img src="./dark-mode.png" class="mode">
+        <img src="./dark-mode.png" class="mode" id="mode-change" onclick="modeOn()">
 
-       <img src="./image-1.1.jpg" class="image" id="image">
+        <img src="./image-1.1.jpg" class="image" id="image">
 
-       <div class="decs-container">
-       <p class="desc">"भगवान श्री हनुमान आपल्या जीवनात आनंद,
-        शांती आणि समृद्धी मिळवून देवो
-        आणि त्याची कृपादृष्टी आपल्या परिवारावर कायम राहो"
-        हनुमान जयंतीच्या हार्दिक शुभेच्छा"</p>
+        <div class="decs-container">
+            <p class="desc" id="desc">"भगवान श्री हनुमान आपल्या जीवनात आनंद,
+                शांती आणि समृद्धी मिळवून देवो
+                आणि त्याची कृपादृष्टी आपल्या परिवारावर कायम राहो"
+                हनुमान जयंतीच्या हार्दिक शुभेच्छा"</p>
         </div>
 
-        <img src="./arrow-img.png" class="arrow-img"  onclick="changeImage()">
+        <img src="./arrow-right.png" class="arrow-img" onclick="changeImage()">
 
         <p class="creators-name">Created By: Sakshi Lambe</p>
-
-    
     </div>
 
 
     <script>
-
-        function changeImage(){
-
-            const min=1;
-            const max=6;
-            const value=Math.round(Math.random()*(max-min)+(min));
+        function changeImage() {
+            const min = 1;
+            const max = 6;
+            const value = Math.round(Math.random() * (max - min) + (min));
             console.log(value);
             const imageElement = document.getElementById('image');
 
-
-            switch(value){
+            switch (value) {
                 case 1:
-                imageElement.src="./image-1.1.jpg";
-                break;
+                    imageElement.src = "./image-1.1.jpg";
+                    break;
 
                 case 2:
-                imageElement.src="./image-2.jpg";
-                break;
+                    imageElement.src = "./image-2.jpg";
+                    break;
 
                 case 3:
-                imageElement.src="./image-3.jpg";
-                break;
+                    imageElement.src = "./image-3.jpg";
+                    break;
 
                 case 4:
-                imageElement.src="./image-4.jpg";
-                break;
+                    imageElement.src = "./image-4.jpg";
+                    break;
 
                 case 5:
-                imageElement.src="./image-5.jpg";
-                break;
+                    imageElement.src = "./image-5.jpg";
+                    break;
 
                 case 6:
-                imageElement.src="./image-6.jpg";
-                break;
-                    
+                    imageElement.src = "./image-6.jpg";
+                    break;
+
             }
         }
+
+        let state = true;
+        function modeOn() {
+            const modeElement = document.getElementById("mode-change");
+            const containerElement = document.getElementById("container");
+            const decElement=document.getElementById("desc");
+
+            if (state == true) {
+                modeElement.src = "./day-mode.png";
+                state = false;
+                console.log(state);
+                containerElement.classList.add("bg-dark");
+                containerElement.classList.remove("bg-light");
+                containerElement.classList.remove("bg-container-dafult"); 
+                decElement.classList.add("decs-color");
+
+            }
+            else {
+                modeElement.src = "./dark-mode.png";
+                state = true;
+                console.log(state);
+                containerElement.classList.add("bg-light");
+                containerElement.classList.remove("bg-dark");
+            }
+        }
+
     </script>
-    
+
 </body>
+
 </html>
