@@ -8,6 +8,14 @@
     <style>
         body {
             margin: 0;
+            /* background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(161,255,255,1) 11.3%, rgba(6,255,255,1) 41.2%, rgba(0,216,216,1) 77.8% ); */
+
+            background: #1CD8D2;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #93EDC7, #1CD8D2);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #93EDC7, #1CD8D2);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
         }
 
@@ -22,7 +30,7 @@
         }
 
         .bg-container-dafult {
-            background-image: linear-gradient(68.4deg, rgba(99, 251, 215, 1) -0.4%, rgba(5, 222, 250, 1) 100.2%);
+            background-image: linear-gradient(174.2deg, rgba(255, 244, 228, 1) 7.1%, rgba(240, 246, 238, 1) 67.4%);
         }
 
         .heading {
@@ -62,16 +70,19 @@
         }
 
         .arrow-img {
-            height: 30px;
+            height: 25px;
             position: absolute;
             top: 200px;
             right: 2px;
             cursor: pointer;
-            background-color: greenyellow;
+            padding: 2px;
+
         }
 
         .arrow-img:hover {
             background-color: aqua;
+            border-radius: 50%;
+            padding: 3px;
         }
 
         .creators-name {
@@ -94,12 +105,18 @@
         }
 
         .bg-light {
-            background-image: linear-gradient(68.4deg, rgba(99, 251, 215, 1) -0.4%, rgba(5, 222, 250, 1) 100.2%);
+            background-image: linear-gradient(174.2deg, rgba(255, 244, 228, 1) 7.1%, rgba(240, 246, 238, 1) 67.4%);
             color: black;
         }
 
-        .decs-color{
+        .decs-color {
             color: black;
+        }
+
+        .position {
+            position: absolute;
+            top: 200px;
+            left: 2px;
         }
     </style>
 </head>
@@ -119,7 +136,8 @@
                 हनुमान जयंतीच्या हार्दिक शुभेच्छा"</p>
         </div>
 
-        <img src="./arrow-right.png" class="arrow-img" onclick="changeImage()">
+        <img src="./left-arrow.png" class="arrow-img" onclick="changeImage()">
+        <img src="./right-arrow.png" class="arrow-img position" onclick="changeImage()">
 
         <p class="creators-name">Created By: Sakshi Lambe</p>
     </div>
@@ -165,15 +183,15 @@
         function modeOn() {
             const modeElement = document.getElementById("mode-change");
             const containerElement = document.getElementById("container");
-            const decElement=document.getElementById("desc");
+            const decElement = document.getElementById("desc");
 
             if (state == true) {
-                modeElement.src = "./day-mode.png";
+                modeElement.src = "./light.png";
                 state = false;
                 console.log(state);
                 containerElement.classList.add("bg-dark");
                 containerElement.classList.remove("bg-light");
-                containerElement.classList.remove("bg-container-dafult"); 
+                containerElement.classList.remove("bg-container-dafult");
                 decElement.classList.add("decs-color");
 
             }
