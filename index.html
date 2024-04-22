@@ -20,9 +20,10 @@
             position: relative;
             border: 2px solid black;
             box-shadow: 0 0 15px 2px grey;
+            
         }
 
-        .bg-container-dafult {
+        .bg-container-defult {
             background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(161,255,255,1) 11.3%, rgba(6,255,255,1) 41.2%, rgba(0,216,216,1) 77.8% );
 
             
@@ -164,11 +165,7 @@
             align-items: center;
         }
 
-     
-        .text-color{
-            color: black;
-        }
-
+    
         @media screen and (min-width: 320px) and (max-width: 420px) {
 
             .card-container {
@@ -243,7 +240,7 @@
 </head>
 
 <body>
-    <div class="card-container bg-container-dafult" id="container">
+    <div class="card-container bg-container-defult " id="container">
         <h1 class="heading">🌸!! जय श्री राम !!🌸</h1>
 
         <img src="./dark-mode.png" class="mode" id="mode-change" onclick="modeOn()">
@@ -314,7 +311,9 @@
         function modeOn() {
             const modeElement = document.getElementById("mode-change");
             const containerElement = document.getElementById("container");
-            const decElement = document.getElementById("desc");
+            const decElement = document.getElementById("hello-ram");
+            const commentElement = document.getElementById("desc");
+
 
             if (state == true) {
                 modeElement.src = "./light.png";
@@ -322,8 +321,11 @@
                 console.log(state);
                 containerElement.classList.add("bg-dark");
                 containerElement.classList.remove("bg-light");
-                containerElement.classList.remove("bg-container-dafult");
+                containerElement.classList.remove("bg-container-defult");
                 decElement.classList.add("decs-color");
+                commentElement.classList.add("decs-color");
+                console.log( decElement.classList);
+
 
             }
             else {
